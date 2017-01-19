@@ -1,0 +1,38 @@
+{% set name = "pyo" %}
+{% set version = "0.8.2" %}
+{% set sha256 = "c5e16c774985ca93a440d996e679d28d8ff6258ee9e4430fb45e2a56096680b8" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{version}}-{{sha256}}.tar.gz
+  url: http://ajaxsoundstudio.com/downloads/pyo_{{version}}-src.tar.bz2
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: true  # [win]
+
+requirements:
+  build:
+    - setuptools
+    - python
+    - portaudio
+  run:
+    - python
+    - portaudio
+
+test:
+  imports:
+    - pyo
+
+about:
+  home: http://ajaxsoundstudio.com/software/pyo/
+  license: GPL3
+  summary: dedicated Python module for digital signal processing
+
+extra:
+  recipe-maintainers:
+    - kastman
