@@ -9,20 +9,20 @@ package:
   version: {{ version }}
 
 source:
-    fn: {{ name|lower }}-{{version}}-{{ sha256 }}.zip
-    url: https://github.com/{{ org }}/{{ name }}/archive/{{ upstreamversion }}.zip
-    sha256: {{ sha256 }}
+  fn: {{ name|lower }}-{{version}}-{{ sha256 }}.zip
+  url: https://github.com/{{ org }}/{{ name }}/archive/{{ upstreamversion }}.zip
+  sha256: {{ sha256 }}
 
 build:
-    number: 0
-    skip: True  # [py3k]
-    script: python setup.py install
+  number: 0
+  skip: True  # [py3k]
+  script: python setup.py install
 
 requirements:
-    build:
-        - python
-    run:
-        - python
+  build:
+      - python
+  run:
+      - python
 test:
   imports:
     - u3
