@@ -1,7 +1,7 @@
 {% set name = "LabJackPython" %}
 {% set org = "labjack" %}
 {% set upstreamversion = "4-24-2014" %}
-{% set version = "20140424" %}
+{% set version = "2014.04.24" %}
 {% set sha256 = "9cf7a6fca9f1308b60a4442dd1410af216fb1d38e49aa5c1ca1e670958c4bcf5" %}
 
 package:
@@ -32,7 +32,7 @@ test:
 about:
   home: http://labjack.com/support/labjackpython
   summary: "Python module for communicating with the LabJack U3/U6/UE9/U12."
-  license: MIT X-11
+  license: MIT
   license_family: MIT
 
 extra:
